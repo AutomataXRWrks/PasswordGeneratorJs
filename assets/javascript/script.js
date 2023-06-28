@@ -4,6 +4,7 @@ function generatePassword(){
 
   var password = {
     newPassword: "",
+    charSelect: [],
     newlenght: 0,
     minlenght: 8,
     maxlenght: 128,
@@ -81,9 +82,13 @@ if(!intPassLenght){
   var isSpecialChar = confirm("Confirm special character");
 }
 
-for (i = 0; i < intPassLenght; i ++){
-  password.newPassword += password.lowercase()+password.uppercase()+password.numeric()+password.specialCharacters();
-}
+
+
+  for(i=0; i < intPassLenght; i++ ){
+    password.newPassword += password.charSelect.push(password.lowercase(),password.uppercase(),password.numeric(),password.specialCharacters());
+  }
+
+
 
 
 
