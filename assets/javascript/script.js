@@ -4,7 +4,6 @@ function generatePassword(){
 
   var password = {
     newPassword: [],
-    charSelect: "",
     generatingPassword: "",
     newlenght: 0,
     minlenght: 8,
