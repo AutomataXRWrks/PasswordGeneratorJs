@@ -3,8 +3,9 @@
 function generatePassword(){
 
   var password = {
-    newPassword: "",
-    charSelect: [],
+    newPassword: [],
+    charSelect: "",
+    generatingPassword: "",
     newlenght: 0,
     minlenght: 8,
     maxlenght: 128,
@@ -17,25 +18,30 @@ function generatePassword(){
     specialCharsD: [123,126],
 
     lowercase: function(){
+      loweCharSelect = [];
       loweCharRand = Math.floor(Math.random() * (this.lowerChars[1] - this.lowerChars[0]) + this.lowerChars[0]);
-      loweCharSelect = String.fromCharCode(Math.round(loweCharRand));
-      //console.log(loweCharRand);
-
+        for (i = this.lowerChars[0]; i < this.lowerChars[1]+1; i++){
+         loweCharSelect += String.fromCharCode(i);   
+        }  
       return loweCharSelect
     } ,
 
     uppercase: function(){
+      upperCharSelect = [];
       upperCharRand = Math.floor(Math.random() * (this.upperChars[1] - this.upperChars[0]) + this.upperChars[0]);
-      upperCharSelect = String.fromCharCode(Math.round(upperCharRand));
-      //console.log(upperCharRand);
-      
+        for (i = this.upperChars[0]; i  < this.upperChars[1]+1; i++){
+          upperCharSelect += String.fromCharCode(i);
+        }     
       return upperCharSelect
     } ,
 
     numeric: function(){
+      numericCharSelect = [];
       numericCharRand = Math.floor(Math.random() * (this.numericChars[1] - this.numericChars[0]) + this.numericChars[0]);
-      numericCharSelect = String.fromCharCode(Math.round(numericCharRand));
-      //console.log(numericCharRand);     
+        for (i = this.numericChars[0]; i < this.numericChars[1] + 1; i++){
+          numericCharSelect += String.fromCharCode(i);
+        }
+    
 
       return numericCharSelect
     },
@@ -46,19 +52,21 @@ function generatePassword(){
       specialCharsBCharRand = Math.floor(Math.random() * (this.specialCharsB[1] - this.specialCharsB[0]) + this.specialCharsB[0]);
       specialCharsCCharRand = Math.floor(Math.random() * (this.specialCharsC[1] - this.specialCharsC[0]) + this.specialCharsC[0]);
       specialCharsDCharRand = Math.floor(Math.random() * (this.specialCharsD[1] - this.specialCharsD[0]) + this.specialCharsD[0]);
-      specialCharsASelect = String.fromCharCode(Math.round(specialCharsACharRand));
-      specialCharsBSelect = String.fromCharCode(Math.round(specialCharsBCharRand));
-      specialCharsCSelect = String.fromCharCode(Math.round(specialCharsCCharRand));
-      specialCharsDSelect = String.fromCharCode(Math.round(specialCharsDCharRand));
-      charArr.push(specialCharsASelect,specialCharsBSelect,specialCharsCSelect,specialCharsDSelect);
 
+      for (i = this.specialCharsA[0]; i < this.specialCharsA[1]; i ++){
+        charArr += String.fromCharCode(i);
+      }
+      for (h = this.specialCharsB[0]; h < this.specialCharsB[1]; h++){
+        charArr += String.fromCharCode(h);
+      }
 
-
-      charrArrRandSelect = charArr[Math.floor(Math.random() * (3 - 0) + 0)]
-
-      //console.log(charArr);   
-      
-      return charrArrRandSelect
+      for (j = this.specialCharsC[0]; j < this.specialCharsC[1]; j ++){
+        charArr += String.fromCharCode(j);
+      }
+      for (k = this.specialCharsD[0]; k < this.specialCharsD[1]; k++){
+        charArr += String.fromCharCode(k);
+      } 
+      return charArr
     }
 
   }
@@ -71,39 +79,42 @@ function generatePassword(){
 
 var lengthPassword = prompt("Choose the lenght of your password");
 var intPassLenght = Number(lengthPassword);
+//onsole.log(intPassLenght);
+  
 
-if(!intPassLenght){
-  alert("Please select a numeric value ");
-  console.log(intPassLenght);
-} else if (intPassLenght){
-  var isLower = confirm("Confirm lowercase");
-  var isUpper = confirm("Confirm uppercase");
-  var isNumber = confirm("Confirm number");
-  var isSpecialChar = confirm("Confirm special character");
+//console.log(password.lowercase());
+//console.log(password.uppercase());
+//console.log(password.numeric());
+//console.log(password.specialCharacters());
+
+if (!intPassLenght){
+  alert("Try a numeric value");
+} else{
+  isLower=confirm("lowecase");
+  isUpper=confirm("uppercase");
+  isNumber=confirm("numeric");
+  isSpecialChar=confirm("special");
+
+} if (isLower){
+  password.generatingPassword += password.lowercase();
+  //console.log(password.newPassword);
+} if (isUpper){
+  password.generatingPassword += password.uppercase();
+  //console.log(password.newPassword);
+} if (isNumber){
+  password.generatingPassword += password.numeric();
+  //console.log(password.newPassword);
+} if (isSpecialChar){
+  password.generatingPassword += password.specialCharacters();
+  //console.log(password.newPassword);
+  for (i = 0; i < intPassLenght; i++){
+    password.newPassword.push(password.generatingPassword[Math.floor(Math.random() * password.generatingPassword.length)]);
+  }
 }
 
 
 
-  for(i=0; i < intPassLenght; i++ ){
-    password.newPassword += password.charSelect.push(password.lowercase(),password.uppercase(),password.numeric(),password.specialCharacters());
-  }
-
-
-
-
-
-
-
-//console.log(isLower);
-//console.log(isUpper);
-//console.log(isNumber);
-//console.log(isSpecialChar);
-
-console.log(password.newPassword.length);
-
-
-
-return password.newPassword
+return password.newPassword.join("")
 }
 
 
