@@ -72,10 +72,10 @@ function generatePassword(){
 var lengthPassword = prompt("Choose the length of your password");
 var intPassLenght = Number(lengthPassword);
 
-if (!intPassLenght){
+if (!intPassLenght || intPassLenght < 8 || intPassLenght > 128){
   alert("The character length should be between 8 and 128 characters or Try a numeric value instead");
   return;
-}  if (confirm("lowecase")){
+}  if (confirm("lowercase")){
   password.generatingPassword += password.lowercase();
   console.log(password.newPassword);
 } if (confirm("uppercase")){
