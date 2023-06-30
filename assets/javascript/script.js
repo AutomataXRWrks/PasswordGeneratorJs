@@ -77,16 +77,12 @@ if (!intPassLenght || intPassLenght < 8 || intPassLenght > 128){
   return;
 }  if (confirm("Include lowercase characters")){
   password.generatingPassword += password.lowercase();
-  console.log(password.newPassword);
 } if (confirm("Include uppercase characters")){
   password.generatingPassword += password.uppercase();
-  console.log(password.newPassword);
 }  if (confirm("Include numeric characters")){
   password.generatingPassword += password.numeric();
-  console.log(password.newPassword);
 } if (confirm("Include special characters")){
   password.generatingPassword += password.specialCharacters();
-  console.log(password.newPassword);
 }
 
   for (i = 0; i < intPassLenght; i++){
