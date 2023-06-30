@@ -69,11 +69,11 @@ function generatePassword(){
 
   }
 
-var lengthPassword = prompt("Choose the lenght of your password");
+var lengthPassword = prompt("Choose the length of your password");
 var intPassLenght = Number(lengthPassword);
 
 if (!intPassLenght){
-  alert("Character lenght between 8 and 128 characters or Try a numeric value");
+  alert("The character length should be between 8 and 128 characters or Try a numeric value instead");
   return;
 }  if (confirm("lowecase")){
   password.generatingPassword += password.lowercase();
