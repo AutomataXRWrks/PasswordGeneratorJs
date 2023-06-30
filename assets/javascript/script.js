@@ -1,4 +1,3 @@
-// Assignment code here
 
 function generatePassword(){
 
@@ -72,9 +71,11 @@ function generatePassword(){
 
 var lengthPassword = prompt("Choose the lenght of your password");
 var intPassLenght = Number(lengthPassword);
+console.log(intPassLenght);
 
 if (!intPassLenght){
-  alert("Try a numeric value");
+  alert("Character lenght between 8 and 128 characters or Try a numeric value");
+  return;
 }  if (confirm("lowecase")){
   password.generatingPassword += password.lowercase();
   console.log(password.newPassword);
@@ -87,30 +88,24 @@ if (!intPassLenght){
 } if (confirm("special")){
   password.generatingPassword += password.specialCharacters();
   console.log(password.newPassword);
+}
+
   for (i = 0; i < intPassLenght; i++){
     password.newPassword.push(password.generatingPassword[Math.floor(Math.random() * password.generatingPassword.length)]);
   }
-}
 
 
 
 return password.newPassword.join("")
 }
 
-function createPassword(){}
-
-
-// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
 function writePassword() {
 var password = generatePassword();
 var passwordText = document.querySelector("#password");
-
 passwordText.value = password;
-
 }
 
-// Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);
