@@ -70,42 +70,23 @@ function generatePassword(){
 
   }
 
-
-  //console.log(password.lowercase());
-  //console.log(password.uppercase());
-  //console.log(password.numeric());
-  //console.log(password.specialCharacters()); 
-
 var lengthPassword = prompt("Choose the lenght of your password");
 var intPassLenght = Number(lengthPassword);
-//onsole.log(intPassLenght);
-  
-
-//console.log(password.lowercase());
-//console.log(password.uppercase());
-//console.log(password.numeric());
-//console.log(password.specialCharacters());
 
 if (!intPassLenght){
   alert("Try a numeric value");
-} else{
-  isLower=confirm("lowecase");
-  isUpper=confirm("uppercase");
-  isNumber=confirm("numeric");
-  isSpecialChar=confirm("special");
-
-} if (isLower){
+}  if (confirm("lowecase")){
   password.generatingPassword += password.lowercase();
-  //console.log(password.newPassword);
-} if (isUpper){
+  console.log(password.newPassword);
+} if (confirm("uppercase")){
   password.generatingPassword += password.uppercase();
-  //console.log(password.newPassword);
-} if (isNumber){
+  console.log(password.newPassword);
+}  if (confirm("numeric")){
   password.generatingPassword += password.numeric();
-  //console.log(password.newPassword);
-} if (isSpecialChar){
+  console.log(password.newPassword);
+} if (confirm("special")){
   password.generatingPassword += password.specialCharacters();
-  //console.log(password.newPassword);
+  console.log(password.newPassword);
   for (i = 0; i < intPassLenght; i++){
     password.newPassword.push(password.generatingPassword[Math.floor(Math.random() * password.generatingPassword.length)]);
   }
@@ -115,6 +96,8 @@ if (!intPassLenght){
 
 return password.newPassword.join("")
 }
+
+function createPassword(){}
 
 
 // Get references to the #generate element
