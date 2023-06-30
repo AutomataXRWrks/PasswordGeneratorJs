@@ -1,38 +1,54 @@
 # PasswordGeneratorJs
 
 
-# 📖 Code Refactor for Challenge 1
+# 📖 Random Password Generator with Javascript for Challenge 3
 
-The web page for challenge 1 is given as the next images.
+The web page for challenge 3 is given as the next images.
 
-# For desktop users
+# For desktop and mobile users
 
-![A webpage well design for desktop users with a nav bar, a page name and title. semantic lay ](./assets/images/image-1.png)
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(1).png)
 
-![A webpage well design for desktop users with a nav bar, a page name and title. semantic lay](./assets/images/image-2.png)
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(2).png)
 
-# For mobile users
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(3).png)
+
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(4).png)
+
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(5).png)
+
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(6).png)
+
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(7).png)
+
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(8).png)
+
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(9).png)
+
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(10).png)
+
+![A webpage with a graphical user interface with a button for generating random password](./assets/images/PasswordGen(11).png)
 
 
-![A webpage well design for mobile users with a nav bar, a page name and title. semantic lay.](./assets/images/image-3.png)
 
-![A webpage well design for mobile users with a nav bar, a page name and title. semantic lay](./assets/images/image-4.png)
+In this project is contained the web development code for the password generator with Javascript for challenge 3 of module 3. Requested aspects for the challenge where made on the code such as:
 
+* I am presented with a series of prompts for password criteria
 
-In this project is contained the web development refactoring code for challenge 1 of module 1. Requested aspects for the challenge where made on the code such as:
+* Prompt for the length of the password
 
-* Selection of a well concise and descriptive title
+* An alert for a length of at least 8 characters and no more than 128 characters
 
-* Descriptive text on alt attributes
+* Confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
 
-* Css with semantic structure
+* A password is generated that matches the selected criteria
 
-* Css properly commented
+* The password is  written to the page
 
 # 🏆 The base code is deployed a this link 
 
-https://automataxrwrks.github.io/md1ch1/
+https://automataxrwrks.github.io/PasswordGeneratorJs/
 
-## Go to Website: [md1ch1](https://automataxrwrks.github.io/md1ch1/)
+## Go to Website: [PasswordGenerator](https://github.com/AutomataXRWrks/PasswordGeneratorJs)
 
 
