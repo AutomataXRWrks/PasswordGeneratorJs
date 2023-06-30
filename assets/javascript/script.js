@@ -71,7 +71,6 @@ function generatePassword(){
 
 var lengthPassword = prompt("Choose the lenght of your password");
 var intPassLenght = Number(lengthPassword);
-console.log(intPassLenght);
 
 if (!intPassLenght){
   alert("Character lenght between 8 and 128 characters or Try a numeric value");
