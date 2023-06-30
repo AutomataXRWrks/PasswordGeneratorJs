@@ -75,16 +75,16 @@ var intPassLenght = Number(lengthPassword);
 if (!intPassLenght || intPassLenght < 8 || intPassLenght > 128){
   alert("The character length should be between 8 and 128 characters or Try a numeric value instead");
   return;
-}  if (confirm("lowercase")){
+}  if (confirm("Include lowercase characters")){
   password.generatingPassword += password.lowercase();
   console.log(password.newPassword);
-} if (confirm("uppercase")){
+} if (confirm("Include uppercase characters")){
   password.generatingPassword += password.uppercase();
   console.log(password.newPassword);
-}  if (confirm("numeric")){
+}  if (confirm("Include numeric characters")){
   password.generatingPassword += password.numeric();
   console.log(password.newPassword);
-} if (confirm("special")){
+} if (confirm("Include special characters")){
   password.generatingPassword += password.specialCharacters();
   console.log(password.newPassword);
 }
